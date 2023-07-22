@@ -3,8 +3,14 @@ import rgbToHex from "./utils";
 
 const SingleColor = (color) => {
   const { rgb, weight } = color;
-  console.log(rgb, weight);
-  return <h4>single color</h4>;
+  const bcg = rgb.join(",");
+
+  return (
+    <article
+      className="color"
+      style={{ backgroundColor: `rgb(${bcg})` }}
+    ></article>
+  );
 };
 
 export default SingleColor;
